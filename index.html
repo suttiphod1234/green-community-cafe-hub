@@ -92,10 +92,64 @@
                         class="bg-brand-600 text-white px-5 py-2 rounded-full text-sm font-heading font-medium hover:bg-brand-800 transition shadow-lg shadow-brand-600/20 whitespace-nowrap hidden sm:block">
                         Visit Site
                     </a>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn"
+                        class="lg:hidden p-2 text-slate-600 hover:text-brand-600 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#executive"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50"
+                    onclick="toggleMobileMenu()">ภาพรวม</a>
+                <a href="#objectives"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50"
+                    onclick="toggleMobileMenu()">วัตถุประสงค์</a>
+                <a href="#structure"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50"
+                    onclick="toggleMobileMenu()">โครงสร้าง</a>
+                <a href="#model"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50"
+                    onclick="toggleMobileMenu()">ต้นแบบ</a>
+                <a href="#finance"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50"
+                    onclick="toggleMobileMenu()">งบประมาณ</a>
+                <a href="#strategy"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50"
+                    onclick="toggleMobileMenu()">กลยุทธ์</a>
+                <a href="#indicators"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50"
+                    onclick="toggleMobileMenu()">ดัชนีชี้วัด</a>
+                <a href="#org"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50"
+                    onclick="toggleMobileMenu()">องค์กร</a>
+                <a href="https://www.ohk-shop.com" target="_blank"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-brand-600 font-bold bg-brand-50 mt-4 text-center">Visit
+                    ohk-shop.com</a>
+            </div>
+        </div>
     </nav>
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            toggleMobileMenu();
+        });
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+    </script>
 
     <header class="hero-pattern text-white py-24 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-t from-brand-900 via-transparent to-transparent opacity-60"></div>
