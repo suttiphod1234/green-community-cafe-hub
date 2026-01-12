@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Community Cafe & Hub | Project Master Plan</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Sarabun', 'sans-serif'],
+                        heading: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            600: '#16a34a',
+                            800: '#166534',
+                            900: '#14532d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero-pattern {
+            background-color: #166534;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2322c55e' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .section-header::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #16a34a;
+            margin-top: 8px;
+            border-radius: 2px;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-700 font-sans leading-relaxed">
+
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white text-xl">
+                        🌱</div>
+                    <div>
+                        <h1 class="font-heading font-bold text-xl text-brand-900 leading-tight">Green Community</h1>
+                        <p class="text-xs text-brand-600 font-medium">Cafe & Hub Project</p>
+                    </div>
+                </div>
+                <div class="hidden lg:flex space-x-6 text-sm font-medium text-slate-600">
+                    <a href="#executive" class="hover:text-brand-600 transition">ภาพรวม</a>
+                    <a href="#objectives" class="hover:text-brand-600 transition">วัตถุประสงค์</a>
+                    <a href="#structure" class="hover:text-brand-600 transition">โครงสร้าง</a>
+                    <a href="#model" class="hover:text-brand-600 transition">ต้นแบบ</a>
+                    <a href="#finance" class="hover:text-brand-600 transition">งบประมาณ</a>
+                    <a href="#strategy" class="hover:text-brand-600 transition">กลยุทธ์</a>
+                    <a href="#indicators" class="hover:text-brand-600 transition">ดัชนีชี้วัด</a>
+                    <a href="#org" class="hover:text-brand-600 transition">องค์กร</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="https://www.ohk-shop.com" target="_blank"
+                        class="bg-brand-600 text-white px-5 py-2 rounded-full text-sm font-heading font-medium hover:bg-brand-800 transition shadow-lg shadow-brand-600/20 whitespace-nowrap hidden sm:block">
+                        Visit Site
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-pattern text-white py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-900 via-transparent to-transparent opacity-60"></div>
+        <div class="max-w-6xl mx-auto px-4 relative z-10 text-center">
+            <span
+                class="inline-block py-1 px-3 rounded-full bg-brand-500/20 border border-brand-400/30 text-brand-100 text-sm font-medium mb-6 backdrop-blur-sm">
+                ข้อเสนอโครงการเพื่อการลงทุนและพัฒนาชุมชน
+            </span>
+            <h1 class="font-heading text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Green Community Cafe & Hub
+                <br><span class="text-brand-300 text-3xl md:text-5xl">สู่เศรษฐกิจดิจิทัลและคาร์บอนเครดิต</span>
+            </h1>
+            <p class="text-lg text-brand-50 max-w-3xl mx-auto mb-10 font-light">
+                เปลี่ยนพื้นที่ "โคกหนองนา" ให้เป็นศูนย์กลางธุรกิจ (Hub) เชื่อมโยงเครือข่ายเกษตรกร 500 ไร่
+                ด้วยระบบ E-commerce และกลไกการเงินสีเขียว (Green Finance)
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#executive"
+                    class="bg-white text-brand-900 px-8 py-3 rounded-lg font-bold hover:bg-brand-50 transition shadow-lg">ดูรายละเอียดโครงการ</a>
+                <a href="#finance"
+                    class="bg-brand-800 text-white px-8 py-3 rounded-lg font-bold hover:bg-brand-900 transition border border-brand-700">ประมาณการงบลงทุน</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-16 space-y-24">
+
+        <!-- Executive Summary Highlights -->
+        <section id="executive" class="space-y-12">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="font-heading text-3xl font-bold text-slate-800 section-header mx-auto mb-6">ภาพรวมโครงการ
+                    (Project Vision)</h2>
+                <p class="text-lg text-slate-600">
+                    ยกระดับเกษตรทฤษฎีใหม่ให้เป็นโมเดลธุรกิจที่ยั่งยืน เชื่อมโยง <strong>"ต้นน้ำ"</strong> (เกษตรกร)
+                    <strong>"กลางน้ำ"</strong> (คาเฟ่และศูนย์แปรรูป) และ <strong>"ปลายน้ำ"</strong> (E-commerce)
+                    เข้าด้วยกัน เพื่อสร้างรายได้หมุนเวียนและคาร์บอนเครดิต
+                </p>
+            </div>
+
+            <!-- Key Value Props -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-brand-500 hover:shadow-xl transition">
+                    <div class="text-4xl mb-4">🌍</div>
+                    <h3 class="font-bold text-xl text-slate-800 mb-2">Green Economy</h3>
+                    <p class="text-slate-600 text-sm">มุ่งเน้นการกักเก็บคาร์บอน (Carbon Credit) เพื่อเข้าสู่โครงการ
+                        T-VER และใช้ค้ำประกันสินเชื่อ Green Loan</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-blue-500 hover:shadow-xl transition">
+                    <div class="text-4xl mb-4">📲</div>
+                    <h3 class="font-bold text-xl text-slate-800 mb-2">Digital Connectivity</h3>
+                    <p class="text-slate-600 text-sm">เชื่อมโยงสินค้า OTOP สู่ตลาดโลกผ่านระบบจัดการสต็อกมาตรฐานบน <a
+                            href="https://www.ohk-shop.com" class="text-blue-600 hover:underline">ohk-shop.com</a></p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-yellow-500 hover:shadow-xl transition">
+                    <div class="text-4xl mb-4">∞</div>
+                    <h3 class="font-bold text-xl text-slate-800 mb-2">Sustainability</h3>
+                    <p class="text-slate-600 text-sm">แก้ปัญหาน้ำท่วม-แล้งด้วยโคกหนองนา
+                        สร้างรายได้ระยะยาวจากกาแฟคุณภาพและการท่องเที่ยวเชิงนิเวศ</p>
+                </div>
+            </div>
+
+            <!-- ESG Impact -->
+            <div class="bg-slate-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-96 h-96 bg-brand-600 rounded-full blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2">
+                </div>
+                <div class="relative z-10">
+                    <h3 class="font-heading text-2xl font-bold mb-8 border-l-4 border-brand-500 pl-4">
+                        ผลกระทบต่อสังคมและสิ่งแวดล้อม (ESG Impact)</h3>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div>
+                            <h4 class="text-brand-400 font-bold text-lg mb-2">Environment (E)</h4>
+                            <p class="text-slate-300 text-sm">เพิ่มพื้นที่สีเขียว ลดการเผาป่า
+                                และส่งเสริมเกษตรอินทรีย์อย่างเป็นระบบ</p>
+                        </div>
+                        <div>
+                            <h4 class="text-brand-400 font-bold text-lg mb-2">Social (S)</h4>
+                            <p class="text-slate-300 text-sm">สร้างงาน 20-50 ครัวเรือน
+                                ดึงคนรุ่นใหม่กลับถิ่นด้วยงานดิจิทัลและคาเฟ่</p>
+                        </div>
+                        <div>
+                            <h4 class="text-brand-400 font-bold text-lg mb-2">Governance (G)</h4>
+                            <p class="text-slate-300 text-sm">บริหารงานโปร่งใส ตรวจสอบได้ด้วยระบบติดตามดิจิทัล (Digital
+                                Tracking)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Objectives -->
+        <section id="objectives" class="bg-brand-50/50 rounded-3xl p-8 md:p-12">
+            <h2 class="font-heading text-3xl font-bold text-slate-800 section-header mb-8">วัตถุประสงค์โครงการ</h2>
+            <div class="grid sm:grid-cols-2 gap-6">
+                <div class="flex gap-4">
+                    <div
+                        class="bg-white w-12 h-12 rounded-full flex items-center justify-center text-brand-600 font-bold shadow-sm shrink-0">
+                        1</div>
+                    <p class="text-slate-700 pt-3">เพื่อเป็นศูนย์กลางการเรียนรู้เกษตรทฤษฎีใหม่และที่พักผ่อนเชิงนิเวศ</p>
+                </div>
+                <div class="flex gap-4">
+                    <div
+                        class="bg-white w-12 h-12 rounded-full flex items-center justify-center text-brand-600 font-bold shadow-sm shrink-0">
+                        2</div>
+                    <p class="text-slate-700 pt-3">เพื่อสร้างรายได้เสริมให้ชุมชนผ่านการปลูกกาแฟอาราบิก้าคุณภาพสูง</p>
+                </div>
+                <div class="flex gap-4">
+                    <div
+                        class="bg-white w-12 h-12 rounded-full flex items-center justify-center text-brand-600 font-bold shadow-sm shrink-0">
+                        3</div>
+                    <p class="text-slate-700 pt-3">เพื่อเป็นช่องทางจำหน่ายสินค้า OTOP ผ่านระบบออนไลน์และหน้าร้าน</p>
+                </div>
+                <div class="flex gap-4">
+                    <div
+                        class="bg-white w-12 h-12 rounded-full flex items-center justify-center text-brand-600 font-bold shadow-sm shrink-0">
+                        4</div>
+                    <p class="text-slate-700 pt-3">เพื่อเข้าสู่กลไกการชดเชยคาร์บอน (Carbon Credit) สร้างรายได้ระยะยาว
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="structure" class="space-y-12">
+            <div class="text-center">
+                <h2 class="font-heading text-3xl font-bold text-slate-800 section-header inline-block">
+                    องค์ประกอบและโครงสร้าง</h2>
+                <p class="text-slate-500 mt-4">การจัดสรรพื้นที่และการบริหารจัดการสมาชิก</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Zones -->
+                <div class="space-y-6">
+                    <h3 class="font-bold text-xl text-slate-800 border-b pb-2">องค์ประกอบหลัก (Zones)</h3>
+                    <div class="card bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                        <h4 class="font-bold text-brand-800 mb-1">☕ โซนหน้าบ้าน (The Cafe)</h4>
+                        <p class="text-sm text-slate-600">ร้านกาแฟสดในบรรยากาศโคกหนองนา
+                            เน้นดึงดูดนักท่องเที่ยวและคนในพื้นที่</p>
+                    </div>
+                    <div class="card bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                        <h4 class="font-bold text-brand-800 mb-1">🌳 โซนหลังบ้าน (The Farm)</h4>
+                        <p class="text-sm text-slate-600">แปลงปลูกกาแฟแซมป่า (Agroforestry) เก็บ Carbon Credit
+                            และจัดการน้ำ</p>
+                    </div>
+                    <div class="card bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                        <h4 class="font-bold text-brand-800 mb-1">💻 โซนดิจิทัล (Digital Shop)</h4>
+                        <p class="text-sm text-slate-600">จุดกระจายสินค้าและจัดการสต็อก OTOP เชื่อมต่อระบบ ohk-shop.com
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Community Structure -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                    <h3 class="font-bold text-xl text-slate-800 border-b border-slate-200 pb-2 mb-6">โครงสร้างสมาชิก
+                        (Community)</h3>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <span
+                                class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded h-fit font-bold">ต้นน้ำ</span>
+                            <div>
+                                <h5 class="font-bold text-slate-800">ผู้ปลูก (Farmers)</h5>
+                                <p class="text-sm text-slate-600">20-50 ครัวเรือน ปลูกกาแฟและดูแลไม้ยืนต้น</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span
+                                class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded h-fit font-bold">กลางน้ำ</span>
+                            <div>
+                                <h5 class="font-bold text-slate-800">ฝ่ายผลิต (Production)</h5>
+                                <p class="text-sm text-slate-600">พนักงานคาเฟ่, บาริสต้า, ฝ่ายแปรรูป</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span
+                                class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded h-fit font-bold">ปลายน้ำ</span>
+                            <div>
+                                <h5 class="font-bold text-slate-800">ฝ่ายดิจิทัล (Digital)</h5>
+                                <p class="text-sm text-slate-600">แอดมินระบบ, Content Marketing, ขนส่ง</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Model Gallery -->
+        <section id="model" class="space-y-8">
+            <div class="text-center mb-8">
+                <h2 class="font-heading text-3xl font-bold text-slate-800 section-header inline-block">ต้นแบบโครงการ
+                    (Gallery)</h2>
+                <p class="text-slate-500 mt-4">ภาพจำลองและพื้นที่จริงของการดำเนินงาน</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Image 1: Infographic (Plan) -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg h-80 cursor-pointer"
+                    onclick="openLightbox('image/project_infographic.jpg')">
+                    <img src="image/project_infographic.jpg" alt="Master Plan"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                        <div>
+                            <span class="bg-blue-500 text-white text-xs px-2 py-1 rounded mb-2 inline-block">1. The
+                                Plan</span>
+                            <p class="text-white font-bold text-lg">แผนแม่บทโครงการ</p>
+                            <p class="text-slate-300 text-xs mt-1 opacity-0 group-hover:opacity-100 transition">
+                                คลิกเพื่อขยาย</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 2: Structure (Construction) -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg h-80 cursor-pointer"
+                    onclick="openLightbox('image/khok_nong_na_structure.jpg')">
+                    <img src="image/khok_nong_na_structure.jpg" alt="Earthworks"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                        <div>
+                            <span class="bg-yellow-500 text-white text-xs px-2 py-1 rounded mb-2 inline-block">2.
+                                Construction</span>
+                            <p class="text-white font-bold text-lg">งานโครงสร้างพื้นฐาน</p>
+                            <p class="text-slate-300 text-xs mt-1 opacity-0 group-hover:opacity-100 transition">
+                                คลิกเพื่อขยาย</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image 3: Perspective (Vision) -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg h-80 cursor-pointer"
+                    onclick="openLightbox('image/cafe_hub_perspective.jpg')">
+                    <img src="image/cafe_hub_perspective.jpg" alt="Cafe & Hub Vision"
+                        class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                        <div>
+                            <span class="bg-brand-600 text-white text-xs px-2 py-1 rounded mb-2 inline-block">3. The
+                                Vision</span>
+                            <p class="text-white font-bold text-lg">ทัศนียภาพเมื่อเสร็จสมบูรณ์</p>
+                            <p class="text-slate-300 text-xs mt-1 opacity-0 group-hover:opacity-100 transition">
+                                คลิกเพื่อขยาย</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="finance">
+            <h2 class="font-heading text-3xl font-bold text-slate-800 section-header mb-8">การลงทุนและรายได้
+                (Financials)</h2>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Budget Table -->
+                <div>
+                    <h3 class="font-bold text-lg text-slate-700 mb-4">งบประมาณเริ่มต้น (CAPEX)</h3>
+                    <div class="bg-white shadow-lg rounded-xl overflow-hidden border border-slate-200">
+                        <table class="w-full text-sm">
+                            <thead class="bg-slate-800 text-white">
+                                <tr>
+                                    <th class="p-4 text-left">รายการ</th>
+                                    <th class="p-4 text-right">งบประมาณ (บาท)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100">
+                                <tr>
+                                    <td class="p-4 relative">1. งานพัฒนาพื้นที่ (Land Dev)<br><span
+                                            class="text-xs text-slate-500">ขุดหนอง, ปรับดิน, ระบบน้ำ</span></td>
+                                    <td class="p-4 text-right font-mono text-slate-700">250,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4">2. งานก่อสร้าง (Construction)<br><span
+                                            class="text-xs text-slate-500">คาเฟ่, ศูนย์เรียนรู้</span></td>
+                                    <td class="p-4 text-right font-mono text-slate-700">500,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4">3. อุปกรณ์ (Equipment)<br><span
+                                            class="text-xs text-slate-500">เครื่องชงกาแฟ, คั่ว, ซีล</span></td>
+                                    <td class="p-4 text-right font-mono text-slate-700">250,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4">4. ระบบ IT & E-commerce<br><span class="text-xs text-slate-500">POS,
+                                            Web Features</span></td>
+                                    <td class="p-4 text-right font-mono text-slate-700">50,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4">5. เตรียม Carbon Credit<br><span
+                                            class="text-xs text-slate-500">ที่ปรึกษา, ขึ้นทะเบียน T-VER</span></td>
+                                    <td class="p-4 text-right font-mono text-slate-700">100,000</td>
+                                </tr>
+                                <tr class="bg-brand-50">
+                                    <td class="p-4 font-bold text-brand-900">รวมงบลงทุน (CAPEX)</td>
+                                    <td class="p-4 text-right font-bold text-brand-900 text-lg font-mono">1,150,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Revenue & OPEX -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-700 mb-4">รายได้เป้าหมาย (Revenue Streams)</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-green-50 p-4 rounded-xl border border-green-100">
+                                <span class="text-2xl">☕</span>
+                                <h4 class="font-bold text-green-900 mt-2">Cafe Sales</h4>
+                                <p class="text-green-700 font-mono text-lg">90,000+</p>
+                                <p class="text-xs text-green-600">บาท/เดือน</p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-xl border border-blue-100">
+                                <span class="text-2xl">📦</span>
+                                <h4 class="font-bold text-blue-900 mt-2">OTOP Online</h4>
+                                <p class="text-blue-700 font-mono text-lg">150,000+</p>
+                                <p class="text-xs text-blue-600">บาท/เดือน</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <h4 class="font-bold text-slate-700 text-sm mb-2">รายได้อื่นๆ (Season & Year)</h4>
+                            <ul class="text-sm text-slate-600 space-y-1">
+                                <li>• ผลผลิตกาแฟ (ตามฤดูกาล)</li>
+                                <li>• Carbon Credit (2-5 ตัน/ไร่/ปี) - ใช้ลดดอกเบี้ย</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-100 p-6 rounded-xl">
+                        <h3 class="font-bold text-slate-700 mb-2">ค่าใช้จ่ายดำเนินงาน (OPEX)</h3>
+                        <div class="flex justify-between items-end">
+                            <div class="text-sm text-slate-600">
+                                เงินเดือน, วัตถุดิบ, น้ำไฟ, การตลาด
+                            </div>
+                            <div class="text-xl font-mono font-bold text-slate-800">~165,000 <span
+                                    class="text-xs font-normal text-slate-500">บาท/เดือน</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategy & Expansion -->
+        <section id="strategy"
+            class="bg-gradient-to-br from-brand-900 to-slate-900 text-white rounded-3xl p-8 md:p-12 overflow-hidden relative">
+            <div class="relative z-10">
+                <h2 class="font-heading text-3xl font-bold mb-8">แผนขยายผล: โมเดล 10 ไร่สู่ความยั่งยืน</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-xl font-bold text-brand-300 mb-4">ยกระดับสู่ครัวเรือนละ 10 ไร่</h3>
+                        <p class="text-slate-300 mb-6 font-light">
+                            ขยายผลสู่เครือข่าย 50 ครัวเรือน เพื่อสร้างพื้นที่ป่าเศรษฐกิจรวม 500 ไร่
+                            สร้าง Economy of Scale และอำนาจต่อรอง
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex gap-4">
+                                <div
+                                    class="bg-brand-500/20 w-10 h-10 rounded-lg flex items-center justify-center text-brand-300 font-bold shrink-0">
+                                    7</div>
+                                <div>
+                                    <strong class="block text-brand-100">ไร่: ปลูกกาแฟวนเกษตร</strong>
+                                    <span class="text-sm text-slate-400">ปลูกกาแฟร่วมกับไม้โครงสร้าง (ไม้แดง, ยางนา)
+                                        เพื่อร่มเงาและคาร์บอน</span>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <div
+                                    class="bg-blue-500/20 w-10 h-10 rounded-lg flex items-center justify-center text-blue-300 font-bold shrink-0">
+                                    3</div>
+                                <div>
+                                    <strong class="block text-brand-100">ไร่: โคก หนอง นา</strong>
+                                    <span class="text-sm text-slate-400">แหล่งน้ำสำรองและพืชผักสรัางรายได้รายวัน</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+                        <h4 class="font-bold text-white mb-4 border-b border-white/10 pb-2">ผลลัพธ์ที่คาดหวัง (Impact)
+                        </h4>
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="text-brand-300 font-bold">Credit Worthiness</h5>
+                                <p class="text-xs text-slate-300">ไม้เศรษฐกิจใช้เป็นหลักประกัน ธ.ก.ส.
+                                    ได้มูลค่าสูงกว่าเกษตรทั่วไป</p>
+                            </div>
+                            <div>
+                                <h5 class="text-brand-300 font-bold">Carbon Revenue</h5>
+                                <p class="text-xs text-slate-300">กักเก็บ 1,000 - 2,500 ตัน CO2e/ปี (สำหรับ 500 ไร่)</p>
+                            </div>
+                            <div>
+                                <h5 class="text-brand-300 font-bold">Traceability</h5>
+                                <p class="text-xs text-slate-300">ลูกค้าตรวจสอบที่มาได้ เพิ่มมูลค่าสินค้า 2-3 เท่า</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Provincial Indicators -->
+        <section id="indicators">
+            <div class="text-center mb-10">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 text-xs font-bold mb-4">Provincial
+                    Economic Impact</span>
+                <h2 class="font-heading text-3xl font-bold text-slate-800 section-header inline-block">
+                    ดัชนีชี้วัดผลกระทบทางเศรษฐกิจจังหวัดกาฬสินธุ์</h2>
+                <p class="text-slate-500 mt-4 max-w-3xl mx-auto">เป้าหมายเพื่อยกระดับเศรษฐกิจฐานราก (Local Economy)
+                    สู่มาตรฐานสากล ด้วยโมเดลเกษตรแม่นยำและดิจิทัลแพลตฟอร์ม</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- GPP Card -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-brand-500 relative overflow-hidden group hover:-translate-y-1 transition duration-300">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
+                        <span class="text-9xl">📈</span>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-brand-100 p-3 rounded-lg text-2xl">💰</div>
+                            <h3 class="font-bold text-xl text-slate-800">ยกระดับรายได้ต่อหัว (GPP)</h3>
+                        </div>
+                        <p class="text-sm text-slate-500 mb-6 font-medium">Agricultural Sector Income per Rai</p>
+
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="text-center">
+                                <p class="text-xs text-slate-400 mb-1">เดิม (ข้าว)</p>
+                                <p class="text-xl font-mono font-bold text-slate-500">5,000</p>
+                            </div>
+                            <div class="text-2xl text-slate-300">➜</div>
+                            <div class="text-center">
+                                <p class="text-xs text-brand-600 mb-1 font-bold">เป้าหมาย (วนเกษตร)</p>
+                                <p class="text-2xl font-mono font-bold text-brand-700">35,000</p>
+                            </div>
+                        </div>
+                        <div class="bg-brand-50 rounded-lg p-3 text-center">
+                            <span class="text-brand-800 font-bold text-sm">🔥 เพิ่มมูลค่า 500 - 700%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Economy Card -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-blue-500 relative overflow-hidden group hover:-translate-y-1 transition duration-300">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
+                        <span class="text-9xl">💻</span>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-blue-100 p-3 rounded-lg text-2xl">🛍️</div>
+                            <h3 class="font-bold text-xl text-slate-800">เศรษฐกิจดิจิทัล (Digital Value)</h3>
+                        </div>
+                        <p class="text-sm text-slate-500 mb-6">สร้างเม็ดเงินหมุนเวียนสินค้า OTOP ผ่านแพลตฟอร์ม</p>
+
+                        <div class="mb-4">
+                            <p class="text-xs text-slate-400 mb-1">Transaction Value on <span
+                                    class="text-blue-500">ohk-shop.com</span></p>
+                            <p class="text-4xl font-mono font-bold text-blue-700">2.5 <span
+                                    class="text-lg text-slate-500 font-normal">ล้านบาท/ปี</span></p>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-3">
+                            <ul class="text-sm text-blue-800 space-y-1">
+                                <li>✓ ขยายตลาดสินค้าชุมชนสู่ระดับประเทศ</li>
+                                <li>✓ ระบบชำระเงินและขนส่งมาตรฐาน</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Labor Mobility Card -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-orange-500 relative overflow-hidden group hover:-translate-y-1 transition duration-300">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
+                        <span class="text-9xl">👷</span>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-orange-100 p-3 rounded-lg text-2xl">👥</div>
+                            <h3 class="font-bold text-xl text-slate-800">การจ้างงาน & แรงงาน</h3>
+                        </div>
+                        <p class="text-sm text-slate-500 mb-6">ลดการย้ายถิ่นฐาน (Migration Out) ของคนรุ่นใหม่ (20-35 ปี)
+                        </p>
+
+                        <div class="flex justify-between items-end mb-4">
+                            <div>
+                                <p class="text-xs text-slate-400 mb-1">สร้างงานใหม่ (Green Jobs)</p>
+                                <p class="text-3xl font-mono font-bold text-orange-700">15 <span
+                                        class="text-sm text-slate-500 font-normal">ตำแหน่ง</span></p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="bg-orange-50 text-orange-700 px-2 py-1 rounded">Carbon Manager</span>
+                            <span class="bg-orange-50 text-orange-700 px-2 py-1 rounded">Smart Barista</span>
+                            <span class="bg-orange-50 text-orange-700 px-2 py-1 rounded">E-commerce Admin</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Environment Card -->
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-lg border-l-8 border-green-600 relative overflow-hidden group hover:-translate-y-1 transition duration-300">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
+                        <span class="text-9xl">🌳</span>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-green-100 p-3 rounded-lg text-2xl">🌱</div>
+                            <h3 class="font-bold text-xl text-slate-800">ความยั่งยืนทางสิ่งแวดล้อม</h3>
+                        </div>
+                        <p class="text-sm text-slate-500 mb-6">สนับสนุนเป้าหมาย Carbon Neutrality ของจังหวัด</p>
+
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div class="bg-slate-50 p-3 rounded-lg">
+                                <p class="text-xs text-slate-400">พื้นที่สีเขียว (Green Area)</p>
+                                <p class="text-xl font-bold text-green-700">+500 <span
+                                        class="text-xs text-slate-500">ไร่</span></p>
+                            </div>
+                            <div class="bg-slate-50 p-3 rounded-lg">
+                                <p class="text-xs text-slate-400">กักเก็บคาร์บอน</p>
+                                <p class="text-xl font-bold text-green-700">1,000+ <span
+                                        class="text-xs text-slate-500">ตัน/ปี</span></p>
+                            </div>
+                        </div>
+                        <div class="text-xs text-green-800 bg-green-50 p-2 rounded">
+                            *โมเดลป่า 3 อย่าง ประโยชน์ 4 อย่าง
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Organization -->
+        <section id="org">
+            <h2 class="font-heading text-3xl font-bold text-slate-800 section-header mb-10">โครงสร้างองค์กร
+                (Organization)</h2>
+            <div class="flex flex-col items-center max-w-4xl mx-auto">
+                <!-- Exec -->
+                <div
+                    class="bg-slate-800 text-white p-5 rounded-xl text-center shadow-lg w-64 mb-10 relative z-10 transition hover:scale-105">
+                    <h4 class="font-bold text-lg">ผู้อำนวยการโครงการ</h4>
+                    <p class="text-xs text-slate-300">บริหารภาพรวม & พาร์ทเนอร์</p>
+                </div>
+
+                <!-- Connectors -->
+                <div class="w-px h-10 bg-slate-300 -mt-10 mb-10"></div>
+                <div class="w-full h-px bg-slate-300 mb-10 relative max-w-2xl">
+                    <div class="absolute left-0 -top-2 w-px h-4 bg-slate-300"></div>
+                    <div class="absolute right-0 -top-2 w-px h-4 bg-slate-300"></div>
+                    <div class="absolute left-1/2 -top-2 w-px h-4 bg-slate-300 -translate-x-1/2"></div>
+                </div>
+
+                <!-- Depts -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 w-full">
+                    <div class="bg-white p-4 rounded-xl shadow border-t-4 border-slate-500 text-center">
+                        <h5 class="font-bold text-slate-700 text-sm">บัญชีและการเงิน (1)</h5>
+                        <p class="text-xs text-slate-500 mt-1">งบประมาณ, ปันผล</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow border-t-4 border-brand-500 text-center">
+                        <h5 class="font-bold text-slate-700 text-sm">คาเฟ่ & บริการ (2-3)</h5>
+                        <p class="text-xs text-slate-500 mt-1">บาริสต้า, ต้อนรับ</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow border-t-4 border-blue-500 text-center">
+                        <h5 class="font-bold text-slate-700 text-sm">ดิจิทัล & ขนส่ง (1)</h5>
+                        <p class="text-xs text-slate-500 mt-1">แอดมิน, การตลาด</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-xl shadow border-t-4 border-yellow-500 text-center">
+                        <h5 class="font-bold text-slate-700 text-sm">เกษตร & คาร์บอน (1-2)</h5>
+                        <p class="text-xs text-slate-500 mt-1">ส่งเสริม, รังวัดต้นไม้</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workflow -->
+        <section id="flow">
+            <h2 class="font-heading text-3xl font-bold text-slate-800 section-header mb-8">แผนผังกระบวนการ (Workflow)
+            </h2>
+            <div class="bg-white p-4 md:p-8 rounded-2xl shadow-lg border border-slate-100 overflow-hidden text-center group cursor-pointer"
+                onclick="openLightbox('image/workflow_diagram.png')">
+                <img src="image/workflow_diagram.png" alt="Project Workflow Diagram"
+                    class="max-w-full h-auto mx-auto hover:scale-105 transition duration-500 rounded-lg">
+                <p class="text-slate-400 text-sm mt-4 opacity-0 group-hover:opacity-100 transition">คลิกเพื่อดูภาพขยาย
+                </p>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 text-sm">
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">Green Community Hub</h3>
+                <p class="opacity-70">
+                    โครงการพัฒนาเศรษฐกิจฐานรากด้วยนวัตกรรมและวิถีเกษตรยั่งยืน
+                    มุ่งสู่การเป็นต้นแบบ Net Zero Community
+                </p>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">ติดต่อโครงการ</h3>
+                <p>📍 ที่ทำการ: โคกหนองนา กาฬสินธุ์</p>
+                <p>🌐 Website: www.ohk-shop.com</p>
+                <p>📧 Email: contact@ohk-shop.com</p>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-lg mb-4">สนับสนุนโดย</h3>
+                <p>• ธนาคารเพื่อการเกษตรและสหกรณ์การเกษตร (ธ.ก.ส.)</p>
+                <p>• องค์การบริหารจัดการก๊าซเรือนกระจก (TGO)</p>
+                <p>• ชุมชนเครือข่ายผู้ปลูกกาแฟ</p>
+            </div>
+        </div>
+        <div class="text-center mt-12 pt-8 border-t border-slate-800 opacity-50">
+            &copy; 2026 Green Community Cafe & Hub. All Rights Reserved.
+        </div>
+    </footer>
+
+    <div id="lightbox"
+        class="fixed inset-0 z-[60] bg-black/90 hidden flex items-center justify-center p-4 backdrop-blur-sm"
+        onclick="closeLightbox()">
+        <button class="absolute top-4 right-4 text-white hover:text-brand-400 transition" onclick="closeLightbox()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <img id="lightbox-img" src="" alt="Full size"
+            class="max-w-full max-h-[90vh] rounded-lg shadow-2xl transform scale-95 transition duration-300 pointer-events-none">
+    </div>
+
+    <script>
+        // Initialize Mermaid Flowchart
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                fontFamily: 'Sarabun',
+                primaryColor: '#dcfce7',
+                edgeLabelBackground: '#ffffff',
+                tertiaryColor: '#fff'
+            }
+        });
+
+        // Lightbox Functionality
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+
+            img.src = imageSrc;
+            lightbox.classList.remove('hidden');
+
+            // Small delay to allow display:block to apply before adding opacity/scale for animation
+            setTimeout(() => {
+                img.classList.remove('scale-95');
+                img.classList.add('scale-100');
+            }, 10);
+
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+
+            img.classList.remove('scale-100');
+            img.classList.add('scale-95');
+
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                img.src = '';
+                document.body.style.overflow = ''; // Restore scrolling
+            }, 200);
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+</body>
+
+</html>
